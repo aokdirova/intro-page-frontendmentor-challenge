@@ -168,7 +168,7 @@ input {
   font-weight: 600;
   padding: 20px;
   margin-bottom: 0;
-  width: 245px;
+  width: 60vw;
   align-self: center;
   letter-spacing: 1px;
   margin-top: 10px;
@@ -202,7 +202,6 @@ input {
     justify-content: center;
     align-items: center;
     width: 75%;
-    margin: 20px;
   }
 
   .left-container {
