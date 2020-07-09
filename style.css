@@ -25,6 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 70%;
+  min-height: 100vh;
   margin: 20px;
 }
 
@@ -225,6 +226,7 @@ input {
   .right-container {
     width: 50%;
   }
+
 
   .try-free {
     margin-top: 10px;
