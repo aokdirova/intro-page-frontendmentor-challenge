@@ -57,24 +57,25 @@ body {
 
 i {
   position: absolute;
-  left: 250px;
 }
 
 #first-i {
-  top: 50px;
+  transform: translate(15rem,-8.5rem);
   visibility: hidden;
 }
+
 #second-i {
-  top: 120px;
+  transform: translate(15rem,-4.2rem);
   visibility: hidden;
 }
 
 #third-i {
-  top: 260px;
+  transform: translate(15rem,0.2rem);
   visibility: hidden;
 }
 
 #fourth-i {
+  transform: translate(15rem,4.5rem);
   visibility: hidden;
 }
 
@@ -85,22 +86,18 @@ i {
 }
 
 .paragraph-1 {
-  left: 170px;
-  top: 80px;
+  transform: translate(145%, -750%);
 }
 .paragraph-2 {
-  left: 170px;
-  top: 150px;
+  transform: translate(145%, -250%);
 }
 
 .paragraph-3 {
-  left: 175px;
-  top: 220px;
+  transform: translate(150%, 250%);
 }
 
 .paragraph-4 {
-  left: 155px;
-  top: 290px;
+  transform: translate(110%, 750%);
 }
 
 .try-free {
@@ -235,9 +232,26 @@ input {
     padding: 0px;
   }
 
-  i {
-    left: 400px;
-  }
+ 
+#first-i {
+  transform: translate(23rem,-8.5rem);
+  visibility: hidden;
+}
+
+#second-i {
+  transform: translate(23rem,-4.2rem);
+  visibility: hidden;
+}
+
+#third-i {
+  transform: translate(23rem,0.2rem);
+  visibility: hidden;
+}
+
+#fourth-i {
+  transform: translate(23rem,4.5rem);
+  visibility: hidden;
+}
 
   .myButton {
     font-weight: 600;
@@ -252,21 +266,19 @@ input {
 }
 
 .paragraph-1 {
-  left: 305px;
-  top: 80px;
+  transform:translate(230%, -550%)
 }
+
+
 .paragraph-2 {
-  left: 305px;
-  top: 150px;
+  transform:translate(230%, -190%)
 }
 
 .paragraph-3 {
-  left: 308px;
-  top: 220px;
+  transform:translate(240%, 170%)
 }
 
 .paragraph-4 {
-  left: 287px;
-  top: 290px;
+  transform:translate(190%, 535%)
 }
 }
