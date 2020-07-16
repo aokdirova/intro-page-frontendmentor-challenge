@@ -51,54 +51,6 @@ body {
   flex-direction: column;
 }
 
-.sign-form {
-  position: relative;
-}
-
-i {
-  position: absolute;
-}
-
-#first-i {
-  transform: translate(15rem,-8.5rem);
-  visibility: hidden;
-}
-
-#second-i {
-  transform: translate(15rem,-4.2rem);
-  visibility: hidden;
-}
-
-#third-i {
-  transform: translate(15rem,0.2rem);
-  visibility: hidden;
-}
-
-#fourth-i {
-  transform: translate(15rem,4.5rem);
-  visibility: hidden;
-}
-
-.paragraph {
-  position: absolute;
-  color: red;
-  font-size: 9px;
-}
-
-.paragraph-1 {
-  transform: translate(145%, -750%);
-}
-.paragraph-2 {
-  transform: translate(145%, -250%);
-}
-
-.paragraph-3 {
-  transform: translate(150%, 250%);
-}
-
-.paragraph-4 {
-  transform: translate(110%, 750%);
-}
 
 .try-free {
   display: flex;
@@ -126,26 +78,71 @@ i {
 }
 
 form {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  padding: 30px;
 }
+
+.errors-and-icons-1, .errors-and-icons-2,.errors-and-icons-3,.errors-and-icons-4{
+  visibility: hidden;
+  display: flex;
+  justify-content: end;
+}
+
+span {
+  position: relative;
+}
+
+.error1,.error2,.error3,.error4 {
+  color: red;
+  font-size: 10px;
+}
+
+i {
+  position: absolute;
+  left: 0;
+  top:0;
+ color: red;
+}
+#icon-2 {
+transform: translate(8rem, -2.2rem);
+}
+#icon-1 {
+ transform: translate(7.2rem, -2.2rem);
+ }
+ 
+ #icon-3 {
+  transform: translate(5.6rem, -2.2rem);
+  }
+ #icon-4 {
+  transform: translate(6.7rem, -2.2rem);
+  }
+  
+
 
 input {
   border-radius: 8px;
   height: 50px;
-  margin: 10px;
+  margin: 5px;
   text-indent: 20px;
   font-weight: 600;
   color: hsl(240, 4%, 10%);
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+
 .border {
-  border-color:hsl(154, 59%, 51%) ;
+ border-color:hsl(154, 59%, 51%) ;
+  box-shadow: 0px 2px 1px 0 hsl(154, 59%, 51%);
 }
+
+.border-invalid {
+border-color: red;
+box-shadow: 0px 2px 1px 0 red;
+}
+
+
 
 .bottom-text {
   font-size: 10px;
@@ -230,28 +227,7 @@ input {
     margin-bottom: 20px;
     height: 50px;
     padding: 0px;
-  }
-
- 
-#first-i {
-  transform: translate(23rem,-8.5rem);
-  visibility: hidden;
-}
-
-#second-i {
-  transform: translate(23rem,-4.2rem);
-  visibility: hidden;
-}
-
-#third-i {
-  transform: translate(23rem,0.2rem);
-  visibility: hidden;
-}
-
-#fourth-i {
-  transform: translate(23rem,4.5rem);
-  visibility: hidden;
-}
+  }    
 
   .myButton {
     font-weight: 600;
@@ -260,25 +236,4 @@ input {
     width: 95%;
   }
   
-.paragraph {
-  padding: 2px;
-  font-size: 10px;
-}
-
-.paragraph-1 {
-  transform:translate(230%, -550%)
-}
-
-
-.paragraph-2 {
-  transform:translate(230%, -190%)
-}
-
-.paragraph-3 {
-  transform:translate(240%, 170%)
-}
-
-.paragraph-4 {
-  transform:translate(190%, 535%)
-}
 }

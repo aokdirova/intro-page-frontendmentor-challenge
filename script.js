@@ -1,36 +1,14 @@
-const myBtn = document.querySelector(".myButton");
+const nameInput = document.getElementById("first-name-input");
+const familyNameInput = document.getElementById("family-name-input");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+
 const form = document.querySelector("form");
-const nameValue = document.getElementById("first-name-input").value;
-const familyNameValue = document.getElementById("family-name-input").value;
-const emailValue = document.getElementById("email").value;
-const passwordValue = document.getElementById("password").value;
-const icon1 = document.getElementById("first-i");
-const icon2 = document.getElementById("second-i");
-const icon3 = document.getElementById("third-i");
-const icon4 = document.getElementById("fourth-i");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
- checkNameInput();
- checkFamilyNameInput();
- checkEmailInput();
- checkPasswordInput();
- 
-});
-
-function createErrorMessage (id,errorMessage,styleNumber) {
-  const paragraph = document.createElement('p');
-  paragraph.textContent = errorMessage;
-  paragraph.className = `. paragraph paragraph-${styleNumber}`;
-  document.getElementById(id).insertAdjacentElement('afterend',paragraph);
-
-}
-
-function changeStyle(id, icon) {
-  const inputElement = document.getElementById(id);
-  inputElement.style.borderColor = "red";
-  icon.style.visibility = "visible";
-}
+const nameError = document.querySelector(".error1");
+const familyNameError = document.querySelector(".error2");
+const emailError = document.querySelector(".error3");
+const passwordError = document.querySelector(".error4");
 
 function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
@@ -38,43 +16,86 @@ function isEmail(email) {
   );
 }
 
-function checkNameInput() {
-  if (nameValue.trim() === "") {
-    createErrorMessage("first-name-input", "Name cannot be empty",1);
-    changeStyle("first-name-input", icon1);
-  } else {
-    document.getElementById("first-name-input").className = "border";
+function showError() {
+  if (nameInput.value.trim() === "") {
+    nameError.textContent = "First Name cannot be empty!";
+    nameInput.className = "border-invalid";
+    const divEl = document.querySelector(".errors-and-icons-1");
+    divEl.style.visibility = "visible";
   }
-}
-  
-  function checkFamilyNameInput() {
-  if (familyNameValue.trim() === "") {
-    createErrorMessage("family-name-input", "Name cannot be empty",2);
-    changeStyle("family-name-input", icon2);
-  } else {
-    document.getElementById("family-name-input").className = "border";
+  if (familyNameInput.value.trim() === "") {
+    familyNameError.textContent = "Family Name cannot be empty!";
+    familyNameInput.className = "border-invalid";
+    const divEl1 = document.querySelector(".errors-and-icons-2");
+    divEl1.style.visibility = "visible";
+  }
+  if (passwordInput.value.trim() === "") {
+    passwordError.textContent = "Password cannot be empty!";
+    passwordInput.className = "border-invalid";
+    const divEl2 = document.querySelector(".errors-and-icons-4");
+    divEl2.style.visibility = "visible";
+  }
+  if (emailInput.value.trim() === "") {
+    emailError.textContent = "Email cannot be empty!";
+    emailInput.className = "border-invalid";
+    const divEl3 = document.querySelector(".errors-and-icons-3");
+    divEl3.style.visibility = "visible";
+  } else if (!isEmail(emailInput.value.trim())) {
+    emailError.textContent = "Invalid email!";
+    emailInput.className = "border-invalid";
+    const divEl3 = document.querySelector(".errors-and-icons-3");
+    divEl3.style.visibility = "visible";
   }
 }
 
-function checkEmailInput() {
-   if (emailValue.trim() === "") {
-    createErrorMessage("email", "Email cannot be empty",3);
-    changeStyle("email", icon3);
-  } else if (!isEmail(emailValue.trim())) {
-    createTemplate("email", "Not a valid email",3);
-    changeStyle("email", icon3);
-  }else {
-    document.getElementById("email").className = "border";
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (nameInput.value.trim() === "") {
+    showError();
   }
-}
-
-
-  function checkPasswordInput() {
-
-   if (passwordValue.trim() === "") {
-    createErrorMessage("password", "Password cannot be empty",4);
-    changeStyle("password", icon4);
-  } else {
-    document.getElementById("password").className = "border";
+  if (familyNameInput.value.trim() === "") {
+    showError();
   }
-}
+  if (passwordInput.value.trim() === "") {
+    showError();
+  }
+  if (emailInput.value.trim() === "" || !isEmail(emailInput.value.trim())) {
+    showError();
+  }
+});
+
+nameInput.addEventListener("input", () => {
+  if (nameInput.validity.valid) {
+    nameError.textContent = "";
+    nameInput.className = "border";
+    const divEl = document.querySelector(".errors-and-icons-1");
+    divEl.style.visibility = "hidden";
+  }
+});
+familyNameInput.addEventListener("input", () => {
+  if (familyNameInput.validity.valid) {
+    familyNameError.textContent = "";
+    familyNameInput.className = "border";
+    const divEl = document.querySelector(".errors-and-icons-2");
+    divEl.style.visibility = "hidden";
+  }
+});
+
+emailInput.addEventListener("input", () => {
+  if (!emailInput.value.trim() === "" || 
+    isEmail(emailInput.value.trim())) {
+    emailError.textContent = "";
+    emailInput.className = "border";
+    const divEl = document.querySelector(".errors-and-icons-3");
+    divEl.style.visibility = "hidden";
+  }
+});
+
+passwordInput.addEventListener("input", () => {
+  if (passwordInput.validity.valid) {
+    passwordError.textContent = "";
+    passwordInput.className = "border";
+    const divEl = document.querySelector(".errors-and-icons-4");
+    divEl.style.visibility = "hidden";
+  }
+});

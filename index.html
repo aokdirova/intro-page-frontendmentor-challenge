@@ -51,27 +51,40 @@
         </div>
 
         <div class="sign-form">
-          <form action="" >
+          <form action="" novalidate>
             <input autocomplete="off" id="first-name-input" type="text" placeholder="First Name" />
-            <i id='first-i' class= "fas fa-exclamation-circle"></i>
+            <div class="errors-and-icons-1">
+             <span> <i id='icon-1' class= "fas fa-exclamation-circle"></i></span>
+              <p class='error1'></p>
+            </div>
            
 
 
             <input autocomplete="off"  id="family-name-input"  type="text" placeholder="Family Name"  />
-            <i  id='second-i' class= "fas fa-exclamation-circle"></i>
+            
+            <div class="errors-and-icons-2">
+             <span> <i  id='icon-2' class= "fas fa-exclamation-circle"></i></span>
+              <p class='error2'></p>
+            </div>
            
 
 
             <input autocomplete="off" id="email"  type="email" placeholder="Email Address" />
-            <i id='third-i' class= "fas fa-exclamation-circle"></i>
+            <div class="errors-and-icons-3">
+              <span><i id='icon-3' class= "fas fa-exclamation-circle"></i></span>
+              <p class='error3'></p>
+            </div>
            
 
 
             <input autocomplete="off" id="password" type="password" placeholder="Password" />
-            <i id='fourth-i' class= "fas fa-exclamation-circle"></i>
+            <div class="errors-and-icons-4">
+              <span><i id='icon-4' class= "fas fa-exclamation-circle"></i> </span>
+              <p class='error4'></p>
+            </div>
          
 
-            <button class="myButton">CLAIM YOUR FREE TRIAL</button>
+            <button type="submit" class="myButton">CLAIM YOUR FREE TRIAL</button>
             
           </form>
           <div class="bottom-text">
