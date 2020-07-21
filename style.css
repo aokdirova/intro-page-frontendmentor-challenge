@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: row wrap;
   background: url(./images/bg-intro-mobile.png);
   background-size: cover;
   background-repeat: none;
@@ -22,6 +23,8 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 70%;
@@ -49,6 +52,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 
@@ -181,35 +185,22 @@ box-shadow: 0px 2px 1px 0 red;
 
 @media (min-width: 500px) {
   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
     background: url(./images/bg-intro-mobile.png);
     background-repeat: repeat-x;
     background-color: hsl(0, 100%, 74%);
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
+   
   }
 
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 75%;
-  }
 
   .left-container {
-    display: flex;
-    flex-direction: column;
     text-align: start;
-    color: aliceblue;
     align-items: flex-start;
     width: 500px;
     margin: 20px;
     margin-left: 0px;
   }
+
+
 
   .upper-text {
     font-size: 16px;
@@ -217,9 +208,6 @@ box-shadow: 0px 2px 1px 0 red;
     padding-right: 200px;
   }
 
-  .right-container {
-    width: 50%;
-  }
 
 
   .try-free {
