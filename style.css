@@ -188,7 +188,9 @@ box-shadow: 0px 2px 1px 0 red;
     background-color: hsl(0, 100%, 74%);
    
   }
-
+.container {
+  flex-direction:row;
+  }
 
   .left-container {
     text-align: start;
