@@ -13,11 +13,16 @@
     />
 
     <title>Intro component with sign up form</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/e58a33bc9b.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/e58a33bc9b.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./script.js" defer></script>
-
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <!-- <style>
@@ -52,48 +57,113 @@
         </div>
 
         <div class="sign-form">
-          <form action="" novalidate>
-            <input autocomplete="off" id="first-name-input" type="text" placeholder="First Name" />
-            <div class="errors-and-icons-1">
-             <span> <i id='icon-1' class= "fas fa-exclamation-circle"></i></span>
-              <p class='error1'></p>
+          <form action="" style="padding-left:3em">
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+              "
+            >
+              <input
+                style="min-width: 100%;"
+                autocomplete="off"
+                id="first-name-input"
+                type="text"
+                placeholder="First Name"
+              />
+              <div class="errors-and-icons-1">
+                <span>
+                  <i id="icon-1" class="fas fa-exclamation-circle"></i
+                ></span>
+                <p class="error1"></p>
+              </div>
             </div>
-           
 
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+              "
+            >
+              <input
+                style="min-width: 100%;"
+                autocomplete="off"
+                id="family-name-input"
+                type="text"
+                placeholder="Family Name"
+              />
 
-            <input autocomplete="off"  id="family-name-input"  type="text" placeholder="Family Name"  />
-            
-            <div class="errors-and-icons-2">
-             <span> <i  id='icon-2' class= "fas fa-exclamation-circle"></i></span>
-              <p class='error2'></p>
+              <div class="errors-and-icons-2">
+                <span>
+                  <i id="icon-2" class="fas fa-exclamation-circle"></i
+                ></span>
+                <p class="error2"></p>
+              </div>
             </div>
-           
 
-
-            <input autocomplete="off" id="email"  type="email" placeholder="Email Address" />
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+              "
+            >
+            <input
+            style="min-width: 100%;"
+              autocomplete="off"
+              id="email"
+              type="email"
+              placeholder="Email Address"
+            />
             <div class="errors-and-icons-3">
-              <span><i id='icon-3' class= "fas fa-exclamation-circle"></i></span>
-              <p class='error3'></p>
+              <span><i id="icon-3" class="fas fa-exclamation-circle"></i></span>
+              <p class="error3"></p>
             </div>
-           
+            </div>
 
-
-            <input autocomplete="off" id="password" type="password" placeholder="Password" />
+            <div
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              justify-content: center;
+            "
+          >
+            <input
+            style="min-width: 100%;"
+              autocomplete="off"
+              id="password"
+              type="password"
+              placeholder="Password"
+            />
             <div class="errors-and-icons-4">
-              <span><i id='icon-4' class= "fas fa-exclamation-circle"></i> </span>
-              <p class='error4'></p>
+              <span
+                ><i id="icon-4" class="fas fa-exclamation-circle"></i>
+              </span>
+              <p class="error4"></p>
             </div>
-         
+            </div>
 
-            <button type="submit" class="myButton">CLAIM YOUR FREE TRIAL</button>
-            
+
+            <button type="submit" class="myButton">
+              CLAIM YOUR FREE TRIAL
+            </button>
           </form>
           <div class="bottom-text">
-          <p>
-            By clicking the button, you are agreeing to our
-            <span> <strong style="color: hsl(0, 100%, 74%) ;">Terms and Services</strong> </span>
-          </p>
-        </div>
+            <p>
+              By clicking the button, you are agreeing to our
+              <span>
+                <strong style="color: hsl(0, 100%, 74%);"
+                  >Terms and Services</strong
+                >
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
